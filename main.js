@@ -1,1 +1,1 @@
-console.log("Testing webpack works");
+(()=>{"use strict";!function(){let e=document.createElement("h1");e.textContent="Linda's";let t=document.createElement("h2");t.textContent="Coffee you'll love.";let n=document.createElement("img");n.src="../src/image.jpeg",n.width="300px",n.alt="An image of a coffee cup next to spilled coffee beans";const c=document.querySelector("#content");c.appendChild(e),c.appendChild(t),c.appendChild(n)}()})();
