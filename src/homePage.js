@@ -16,9 +16,23 @@ function homePage() {
   img.src = bg;
   img.alt = 'An image of a coffee cup next to spilled coffee beans';
 
+  let nav = document.createElement('nav');
+  let ul = document.createElement('ul');
+  let home = document.createElement('li');
+  home.textContent = 'Home';
+  let menu = document.createElement('li');
+  menu.textContent = 'Menu';
+  let contact = document.createElement('li');
+  contact.textContent = 'Contact';
+
   const content = document.querySelector('div#content');
   content.appendChild(h1);
   content.appendChild(h2);
+  content.appendChild(nav);
+  nav.appendChild(ul);
+  ul.appendChild(home);
+  ul.appendChild(menu);
+  ul.appendChild(contact);
   content.appendChild(img);
 }
 
