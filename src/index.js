@@ -1,1 +1,3 @@
-console.log('Testing webpack works');
+import pageLoad from './pageLoad';
+
+pageLoad();
