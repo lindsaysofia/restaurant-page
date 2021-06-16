@@ -1,16 +1,14 @@
 import './style.css';
 
-function pageLoad() {
+export function pageLoad() {
   let h1 = document.createElement('h1');
   h1.textContent = `Linda's`;
-  
-  let h2 = document.createElement('h2');
-  h2.textContent = `Coffee you'll love.`;
 
   let nav = document.createElement('nav');
   let ul = document.createElement('ul');
   let home = document.createElement('li');
   home.textContent = 'Home';
+  home.classList.add('active');
   let menu = document.createElement('li');
   menu.textContent = 'Menu';
   let contact = document.createElement('li');
@@ -18,7 +16,6 @@ function pageLoad() {
 
   const header = document.querySelector('header');
   header.appendChild(h1);
-  header.appendChild(h2);
   header.appendChild(nav);
   nav.appendChild(ul);
   ul.appendChild(home);
@@ -26,4 +23,14 @@ function pageLoad() {
   ul.appendChild(contact);
 }
 
-export default pageLoad;
+export function clearLi() {
+  const listItems = document.querySelectorAll('li');
+  listItems.forEach(li => {
+    li.classList.remove('active');
+  })
+}
+
+export function clearContent() {
+  const content = document.querySelector('#content');
+  content.html = '';
+}
