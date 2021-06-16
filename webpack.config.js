@@ -1,4 +1,5 @@
 const path = require('path');
+var webpack = require('webpack');
 
 module.exports = {
   entry: './src/index.js',
@@ -13,9 +14,17 @@ module.exports = {
         use: ['style-loader', 'css-loader'],
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: 'asset/resource',
-      },
+        test: /\.(png|jp(e*)g|svg)$/,  
+        use: [
+          {
+            loader: 'url-loader',
+            options: { 
+                limit: 8000, // Convert images < 8kb to base64 strings
+                name: 'images/[hash]-[name].[ext]'
+            } 
+          }
+        ],
+      }
     ],
   },
 };
