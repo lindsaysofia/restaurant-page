@@ -8,11 +8,13 @@ export function pageLoad() {
   let ul = document.createElement('ul');
   let home = document.createElement('li');
   home.textContent = 'Home';
-  home.classList.add('active');
+  home.classList.add('home');
   let menu = document.createElement('li');
   menu.textContent = 'Menu';
+  menu.classList.add('menu');
   let contact = document.createElement('li');
   contact.textContent = 'Contact';
+  contact.classList.add('contact');
 
   const header = document.querySelector('header');
   header.appendChild(h1);
