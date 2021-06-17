@@ -6,7 +6,7 @@ function homePage() {
   home.classList.add('active');
 
   let pWelcome = document.createElement('p');
-  pWelcome.textContent = `Welcome to Linda's!`;
+  pWelcome.innerHTML = `Welcome to <span>Linda's</span>!`;
   pWelcome.classList.add('home-page');
 
   let pIntro = document.createElement('p');
