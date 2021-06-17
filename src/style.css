@@ -7,6 +7,7 @@ body {
   display: grid;
   grid-template-rows: 1fr 10fr;
   font-family: 'Work Sans', sans-serif;
+  font-size: 1.25em;
 }
 
 body, h1, ul, #content {
@@ -100,7 +101,7 @@ i {
 }
 
 .menu-item img {
-  width: 100px;
+  width: 80px;
   justify-self: end;
   margin: 1em;
 }
